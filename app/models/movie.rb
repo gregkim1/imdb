@@ -13,6 +13,10 @@ class Movie < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :actors,
+             :through => :users,
+             :source => :actor
+
   # Validations
 
 end
